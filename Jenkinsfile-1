@@ -1,9 +1,9 @@
 pipeline {
-    agent master
+    agent none
     stages {
         stage('Hello') {
             agent {
-                label 'linux'
+                label 'master'
             }
             steps {
                 sh '''
