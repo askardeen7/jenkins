@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Hello') {
             agent {
-                label 'master'
+                label 'linux'
             }
             steps {
                 sh '''
