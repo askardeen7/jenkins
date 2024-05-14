@@ -1,11 +1,9 @@
-pipeline{
-    agent none
+pipeline {
+    agent master
     stages {
-        stage('Hello'){
-           agent {
-                node {
-                    label 'master'
-                }
+        stage('Hello') {
+            agent {
+                label 'linux'
             }
             steps {
                 sh '''
