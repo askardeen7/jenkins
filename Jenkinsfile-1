@@ -4,7 +4,7 @@ pipeline{
         stage('Hello'){
            agent {
                 node {
-                    label 'linux'
+                    label 'master'
                 }
             }
             steps {
