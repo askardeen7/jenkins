@@ -1,7 +1,12 @@
 pipeline{
-    agent { label 'linux' }
+    agent none
     stages {
         stage('Hello'){
+           agent {
+                node {
+                    label 'linux'
+                }
+            }
             steps {
                 sh '''
                     ansible --version
